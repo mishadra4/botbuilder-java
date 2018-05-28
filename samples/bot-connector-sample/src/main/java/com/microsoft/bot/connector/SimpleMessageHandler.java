@@ -19,18 +19,18 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MessageHandler implements HttpHandler {
-    private static final Logger LOGGER = Logger.getLogger( MessageHandler.class.getName() );
+public class SimpleMessageHandler implements HttpHandler {
+    private static final Logger LOGGER = Logger.getLogger( SimpleMessageHandler.class.getName() );
     private ObjectMapper objectMapper;
     private CredentialProvider credentialProvider;
     private MicrosoftAppCredentials credentials;
 
-    public MessageHandler(CredentialProvider credentialProvider) {
+    public SimpleMessageHandler(CredentialProvider credentialProvider) {
         this.objectMapper = new ObjectMapper()
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .findAndRegisterModules();
         this.credentialProvider = credentialProvider;
-        //this.credentials = new MicrosoftAppCredentials(appId, appPassword);
+        this.credentials = new MicrosoftAppCredentials("0fae9c81-5bea-4439-beab-5bf39bf8b01d", "mkTW5!{;kqukiCNMDS6349_");
     }
 
     public void handle(HttpExchange httpExchange) throws IOException {

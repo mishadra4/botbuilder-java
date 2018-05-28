@@ -17,12 +17,12 @@ import javax.net.ssl.SSLEngine;
 import javax.net.ssl.SSLParameters;
 import javax.net.ssl.TrustManagerFactory;
 
+import com.microsoft.bot.connector.SimpleMessageHandler;
 import com.microsoft.bot.connector.customizations.CredentialProvider;
+import com.sun.net.httpserver.HttpServer;
 import com.sun.net.httpserver.HttpsConfigurator;
 import com.sun.net.httpserver.HttpsParameters;
 import com.sun.net.httpserver.HttpsServer;
-
-import com.microsoft.bot.connector.MessageHandler;
 
 public class BotChannelHttpsServer {
     private HttpsServer server;
@@ -84,7 +84,7 @@ public class BotChannelHttpsServer {
             });
 
             System.out.println("server started at " + port);
-            server.createContext("/api/messages", new MessageHandler(credentialProvider));
+            server.createContext("/api/messages", new SimpleMessageHandler(credentialProvider));
             server.setExecutor(null);
             server.start();
             System.out.println("Server started...");
@@ -106,6 +106,15 @@ public class BotChannelHttpsServer {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        try {
+            HttpServer httpServer = HttpServer.create(new InetSocketAddress(3979),0);
+            httpServer.createContext("/api/messages", new SimpleMessageHandler(credentialProvider));
+            httpServer.setExecutor(null);
+            httpServer.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private String getPath() {

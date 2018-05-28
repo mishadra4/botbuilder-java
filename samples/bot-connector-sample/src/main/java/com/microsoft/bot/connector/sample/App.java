@@ -26,13 +26,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class App {
-    private static String appId = "";       // <-- app id -->
-    private static String appPassword = ""; // <-- app password -->
+    private static String appId = "0fae9c81-5bea-4439-beab-5bf39bf8b01d";       // <-- app id -->
+    private static String appPassword = "mkTW5!{;kqukiCNMDS6349_"; // <-- app password -->
     private static int port = 3978;
 
     public static void main( String[] args ) throws IOException {
         CredentialProvider credentialProvider = new CredentialProviderImpl(appId, appPassword);
-        BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider, args[0]);
+        //BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider, args[0]);
+        BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider, "B://mycert.keystore");
         server.Start(port);
     }
 }
