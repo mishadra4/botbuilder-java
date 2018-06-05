@@ -50,7 +50,7 @@ public class SimpleMessageHandler implements HttpHandler {
                     ResourceResponse response = connector.conversations().sendToConversation(activity.conversation().id(),
                             new Activity()
                                     .withType(ActivityTypes.MESSAGE)
-                                    .withText("Echo: " + activity.text())
+                                    .withText("Epam echo: " + activity.text())
                                     .withRecipient(activity.from())
                                     .withFrom(activity.recipient())
                     );
