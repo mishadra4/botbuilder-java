@@ -16,7 +16,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <name>bot-connector-sample</name>
+    <name>integration</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -134,7 +134,7 @@
             <version>2.7</version>
         </dependency>
         <dependency>
-            <groupId>com.microsoft.bot</groupId>
+            <groupId>epam</groupId>
             <artifactId>core</artifactId>
             <version>4.0.0-a0</version>
         </dependency>
@@ -156,7 +156,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.microsoft.bot.connector.sample.App</mainClass>
+                            <mainClass>com.epam.bot.connector.sample.App</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
@@ -180,7 +180,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>com.microsoft.bot.connector.sample.App</mainClass>
+                    <mainClass>com.epam.bot.connector.sample.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>

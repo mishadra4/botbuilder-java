@@ -81,7 +81,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.6.0</version>
         <configuration>
-          <mainClass>com.microsoft.bot.connector.sample.App</mainClass>
+          <mainClass>App</mainClass>
         </configuration>
       </plugin>
     </plugins>
