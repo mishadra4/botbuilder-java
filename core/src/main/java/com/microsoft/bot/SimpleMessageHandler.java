@@ -1,4 +1,4 @@
-package com.microsoft.bot.connector;
+package com.microsoft.bot;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -7,7 +7,6 @@ import com.microsoft.bot.connector.customizations.CredentialProvider;
 import com.microsoft.bot.connector.customizations.JwtTokenValidation;
 import com.microsoft.bot.connector.customizations.MicrosoftAppCredentials;
 import com.microsoft.bot.connector.implementation.ConnectorClientImpl;
-import com.microsoft.bot.connector.sample.App;
 import com.microsoft.bot.schema.models.Activity;
 import com.microsoft.bot.schema.models.ActivityTypes;
 import com.microsoft.bot.schema.models.ResourceResponse;

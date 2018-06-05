@@ -1,28 +1,19 @@
 package com.microsoft.bot.connector.sample;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.security.KeyManagementException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.UnrecoverableKeyException;
-import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
 
-import javax.net.ssl.KeyManagerFactory;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLEngine;
-import javax.net.ssl.SSLParameters;
-import javax.net.ssl.TrustManagerFactory;
-
-import com.microsoft.bot.connector.SimpleMessageHandler;
+import com.microsoft.bot.SimpleMessageHandler;
 import com.microsoft.bot.connector.customizations.CredentialProvider;
 import com.sun.net.httpserver.HttpServer;
 import com.sun.net.httpserver.HttpsConfigurator;
 import com.sun.net.httpserver.HttpsParameters;
 import com.sun.net.httpserver.HttpsServer;
+
+import javax.net.ssl.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.security.*;
+import java.security.cert.CertificateException;
 
 public class BotChannelHttpsServer {
     private HttpsServer server;

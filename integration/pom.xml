@@ -133,6 +133,11 @@
             <artifactId>joda-time</artifactId>
             <version>2.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.microsoft.bot</groupId>
+            <artifactId>core</artifactId>
+            <version>4.0.0-a0</version>
+        </dependency>
     </dependencies>
 
     <build>
