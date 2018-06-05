@@ -14,7 +14,10 @@
   <modules>
     <module>libraries/botbuilder-schema</module>
     <module>libraries/bot-connector</module>
-    <module>samples/bot-connector-sample</module>
+    <!--<module>samples/bot-connector-sample</module>-->
+      <module>core</module>
+    <module>nlp</module>
+    <module>integration</module>
   </modules>
 
 

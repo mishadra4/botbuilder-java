@@ -34,8 +34,8 @@ public class App {
         CredentialProvider credentialProvider = new CredentialProviderImpl(appId, appPassword);
         //BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider, args[0]);
 //        BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider, "B://mycert.keystore");
-        BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider,  "samples/bot-connector-sample" +
-                "/src/main/java/com/microsoft/bot/connector/sample/mycert.keystore");
+        BotChannelHttpsServer server = new BotChannelHttpsServer(credentialProvider,  "integration/src/main" +
+                "/java/com/microsoft/bot/connector/sample/mycert.keystore");
         server.Start(port);
     }
 }
